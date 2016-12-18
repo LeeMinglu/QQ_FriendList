@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A3EEE651E0653F10074CCC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EEE641E0653F10074CCC3 /* AppDelegate.swift */; };
-		1A3EEE671E0653F10074CCC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EEE661E0653F10074CCC3 /* ViewController.swift */; };
 		1A3EEE6A1E0653F10074CCC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EEE681E0653F10074CCC3 /* Main.storyboard */; };
 		1A3EEE6C1E0653F10074CCC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EEE6B1E0653F10074CCC3 /* Assets.xcassets */; };
 		1A3EEE6F1E0653F10074CCC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EEE6D1E0653F10074CCC3 /* LaunchScreen.storyboard */; };
+		1A3EEE7C1E0654B70074CCC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EEE771E0654B70074CCC3 /* ViewController.swift */; };
+		1A3EEE7D1E0654B70074CCC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EEE7A1E0654B70074CCC3 /* AppDelegate.swift */; };
+		1A3EEE7F1E0655120074CCC3 /* friends.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EEE7E1E0655120074CCC3 /* friends.plist */; };
+		1A3EEE811E06569C0074CCC3 /* LSFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EEE801E06569C0074CCC3 /* LSFriend.swift */; };
+		1A3EEE831E0659F10074CCC3 /* LSGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EEE821E0659F10074CCC3 /* LSGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1A3EEE611E0653F10074CCC3 /* QQFriendList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQFriendList.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A3EEE641E0653F10074CCC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1A3EEE661E0653F10074CCC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A3EEE691E0653F10074CCC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A3EEE6B1E0653F10074CCC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A3EEE6E1E0653F10074CCC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A3EEE701E0653F10074CCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A3EEE771E0654B70074CCC3 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A3EEE7A1E0654B70074CCC3 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1A3EEE7E1E0655120074CCC3 /* friends.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friends.plist; sourceTree = "<group>"; };
+		1A3EEE801E06569C0074CCC3 /* LSFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSFriend.swift; sourceTree = "<group>"; };
+		1A3EEE821E0659F10074CCC3 /* LSGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +60,49 @@
 		1A3EEE631E0653F10074CCC3 /* QQFriendList */ = {
 			isa = PBXGroup;
 			children = (
-				1A3EEE641E0653F10074CCC3 /* AppDelegate.swift */,
-				1A3EEE661E0653F10074CCC3 /* ViewController.swift */,
+				1A3EEE761E0654B70074CCC3 /* Controller */,
+				1A3EEE781E0654B70074CCC3 /* Model */,
+				1A3EEE791E0654B70074CCC3 /* Other */,
+				1A3EEE7B1E0654B70074CCC3 /* View */,
 				1A3EEE681E0653F10074CCC3 /* Main.storyboard */,
 				1A3EEE6B1E0653F10074CCC3 /* Assets.xcassets */,
 				1A3EEE6D1E0653F10074CCC3 /* LaunchScreen.storyboard */,
 				1A3EEE701E0653F10074CCC3 /* Info.plist */,
 			);
 			path = QQFriendList;
+			sourceTree = "<group>";
+		};
+		1A3EEE761E0654B70074CCC3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A3EEE771E0654B70074CCC3 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A3EEE781E0654B70074CCC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A3EEE7E1E0655120074CCC3 /* friends.plist */,
+				1A3EEE801E06569C0074CCC3 /* LSFriend.swift */,
+				1A3EEE821E0659F10074CCC3 /* LSGroup.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1A3EEE791E0654B70074CCC3 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				1A3EEE7A1E0654B70074CCC3 /* AppDelegate.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1A3EEE7B1E0654B70074CCC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +131,7 @@
 		1A3EEE591E0653F10074CCC3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LS;
 				LastSwiftUpdateCheck = 0820;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = SocererGroup;
@@ -126,6 +168,7 @@
 			files = (
 				1A3EEE6F1E0653F10074CCC3 /* LaunchScreen.storyboard in Resources */,
 				1A3EEE6C1E0653F10074CCC3 /* Assets.xcassets in Resources */,
+				1A3EEE7F1E0655120074CCC3 /* friends.plist in Resources */,
 				1A3EEE6A1E0653F10074CCC3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,8 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A3EEE671E0653F10074CCC3 /* ViewController.swift in Sources */,
-				1A3EEE651E0653F10074CCC3 /* AppDelegate.swift in Sources */,
+				1A3EEE831E0659F10074CCC3 /* LSGroup.swift in Sources */,
+				1A3EEE7D1E0654B70074CCC3 /* AppDelegate.swift in Sources */,
+				1A3EEE811E06569C0074CCC3 /* LSFriend.swift in Sources */,
+				1A3EEE7C1E0654B70074CCC3 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +306,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = T9A27F8Q5D;
 				INFOPLIST_FILE = QQFriendList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -274,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = T9A27F8Q5D;
 				INFOPLIST_FILE = QQFriendList/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -15,6 +15,7 @@
 		1A3EEE7F1E0655120074CCC3 /* friends.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EEE7E1E0655120074CCC3 /* friends.plist */; };
 		1A3EEE811E06569C0074CCC3 /* LSFriend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EEE801E06569C0074CCC3 /* LSFriend.swift */; };
 		1A3EEE831E0659F10074CCC3 /* LSGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3EEE821E0659F10074CCC3 /* LSGroup.swift */; };
+		1A3EEE8D1E06943B0074CCC3 /* LSFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EEE8B1E06943B0074CCC3 /* LSFriendCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1A3EEE7E1E0655120074CCC3 /* friends.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friends.plist; sourceTree = "<group>"; };
 		1A3EEE801E06569C0074CCC3 /* LSFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSFriend.swift; sourceTree = "<group>"; };
 		1A3EEE821E0659F10074CCC3 /* LSGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSGroup.swift; sourceTree = "<group>"; };
+		1A3EEE8B1E06943B0074CCC3 /* LSFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSFriendCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 		1A3EEE7B1E0654B70074CCC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1A3EEE8B1E06943B0074CCC3 /* LSFriendCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A3EEE6F1E0653F10074CCC3 /* LaunchScreen.storyboard in Resources */,
+				1A3EEE8D1E06943B0074CCC3 /* LSFriendCell.xib in Resources */,
 				1A3EEE6C1E0653F10074CCC3 /* Assets.xcassets in Resources */,
 				1A3EEE7F1E0655120074CCC3 /* friends.plist in Resources */,
 				1A3EEE6A1E0653F10074CCC3 /* Main.storyboard in Resources */,
@@ -349,6 +353,7 @@
 				1A3EEE751E0653F10074CCC3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

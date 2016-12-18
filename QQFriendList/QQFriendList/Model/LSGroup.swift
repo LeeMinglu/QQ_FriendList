@@ -9,7 +9,7 @@
 import UIKit
 
 class LSGroup: NSObject {
-    var friends: Array<Any>!
+    var friends: Array<AnyObject>?
     var name: String?
     var online: NSNumber?
  
@@ -23,7 +23,7 @@ class LSGroup: NSObject {
     init(dict: [String: AnyObject]) {
         super.init()
         setValuesForKeys(dict)
-        var friends  = [LSFriend]()
+        var friends = [LSFriend]()
         for friendDict in self.friends! {
             let friend = LSFriend.init(dict: friendDict as! [String : AnyObject])
             friends.append(friend)

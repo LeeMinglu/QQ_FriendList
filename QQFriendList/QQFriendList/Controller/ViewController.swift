@@ -26,6 +26,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        tableView.register(UINib.init(nibName: "LSFriendCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         
         tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
+    
+
+        
         self.tableView = tableView
         self.view.addSubview(tableView)
         
@@ -61,11 +64,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         cell.imageView!.image = UIImage(named: friend.icon!)
         cell.textLabel!.text = friend.name!
-        cell.detailTextLabel!.text = friend.intro!
+//        cell.detailTextLabel!.text! = friend.intro!
         
         return cell
-       
-        
     }
 
 

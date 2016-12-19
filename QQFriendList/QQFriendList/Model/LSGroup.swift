@@ -28,6 +28,7 @@ class LSGroup: NSObject {
             let friend = LSFriend.init(dict: friendDict as! [String : AnyObject])
             friends.append(friend)
         }
+        self.friends = friends
     }
     
     override func  setValue(_ value: Any?, forUndefinedKey key: String) { }

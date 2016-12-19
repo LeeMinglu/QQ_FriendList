@@ -23,9 +23,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let tableView = UITableView.init(frame: CGRect.init(origin: screenBounds.origin, size: screenBounds.size), style: UITableViewStyle.grouped)
         
-//        tableView.register(UINib.init(nibName: "LSFriendCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        tableView.register(UINib.init(nibName: "LSFriendCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         
-        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
+//        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
     
 
         
@@ -56,15 +56,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! LSFriendCell
+       
         let group = self.fridendModels[indexPath.section]
         NSLog("sssssssssssssssss")
         
         let friend = (group.friends![indexPath.row]) as! LSFriend
-        
-        cell.imageView!.image = UIImage(named: friend.icon!)
-        cell.textLabel!.text = friend.name!
-//        cell.detailTextLabel!.text! = friend.intro!
+
+        cell.icon.image = UIImage(named: friend.icon!)
+        cell.name.setTitle(friend.name!, for: .normal)
+        cell.intro.setTitle(friend.intro, for: .normal)
+
         
         return cell
     }

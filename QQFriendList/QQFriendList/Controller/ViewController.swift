@@ -27,7 +27,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
 //        tableView.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
     
-
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         
         self.tableView = tableView
         self.view.addSubview(tableView)

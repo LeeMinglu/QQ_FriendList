@@ -32,6 +32,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableView = tableView
         self.view.addSubview(tableView)
         
+        let insets = UIEdgeInsetsMake(44, 0, 50, 0)
+        self.tableView.contentInset = insets
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }

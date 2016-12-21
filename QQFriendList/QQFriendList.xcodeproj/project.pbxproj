@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A2CB7571E096D1C005B0064 /* LSHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2CB7561E096D1C005B0064 /* LSHeaderView.swift */; };
 		1A3759BA1E08238900C5DA98 /* LSFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3759B81E08238900C5DA98 /* LSFriendCell.swift */; };
 		1A3759BB1E08238900C5DA98 /* LSFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A3759B91E08238900C5DA98 /* LSFriendCell.xib */; };
 		1A3EEE6A1E0653F10074CCC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A3EEE681E0653F10074CCC3 /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A2CB7561E096D1C005B0064 /* LSHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSHeaderView.swift; sourceTree = "<group>"; };
 		1A3759B81E08238900C5DA98 /* LSFriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSFriendCell.swift; sourceTree = "<group>"; };
 		1A3759B91E08238900C5DA98 /* LSFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LSFriendCell.xib; sourceTree = "<group>"; };
 		1A3EEE611E0653F10074CCC3 /* QQFriendList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QQFriendList.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 			children = (
 				1A3759B81E08238900C5DA98 /* LSFriendCell.swift */,
 				1A3759B91E08238900C5DA98 /* LSFriendCell.xib */,
+				1A2CB7561E096D1C005B0064 /* LSHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A2CB7571E096D1C005B0064 /* LSHeaderView.swift in Sources */,
 				1A3759BA1E08238900C5DA98 /* LSFriendCell.swift in Sources */,
 				1A3EEE831E0659F10074CCC3 /* LSGroup.swift in Sources */,
 				1A3EEE7D1E0654B70074CCC3 /* AppDelegate.swift in Sources */,

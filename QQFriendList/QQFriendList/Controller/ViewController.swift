@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let cellIdentifier = "friend"
+    let headIdentifier = "headView"
     
     
     var tableView: UITableView!
@@ -72,6 +73,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headView = LSHeaderView.init(reuseIdentifier: headIdentifier)
+        let group = self.fridendModels[section]
+        
+//        let view = UIView.init()
+//        view.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 10)
+//        view.backgroundColor = UIColor.red
+//        return view
+        headView.friendGroup = group
+        return headView
     }
 
 

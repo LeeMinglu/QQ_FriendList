@@ -28,7 +28,13 @@ class LSHeaderView: UITableViewHeaderFooterView {
         
         self.groupTitle.setTitleColor(UIColor.blue, for: UIControlState.normal)
         
+        self.groupTitle.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
+        self.groupTitle.contentVerticalAlignment = UIControlContentVerticalAlignment.fill
+        
+        self.groupTitle.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
         contentView.addSubview(self.groupOnlineCount)
+        
+        self.contentView.backgroundColor = UIColor.red
 
         
     }
@@ -47,7 +53,7 @@ class LSHeaderView: UITableViewHeaderFooterView {
     override func layoutSubviews() {
         super.layoutSubviews()
         let groupTitleFrame = CGRect(x: 5, y: 0, width: 100, height: 10)
-        self.groupTitle.frame = groupTitleFrame
+        self.groupTitle.frame = self.bounds
     }
 
 }

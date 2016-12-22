@@ -15,6 +15,9 @@ class LSHeaderView: UITableViewHeaderFooterView {
     var friendGroup: LSGroup! {
         didSet {
             self.groupTitle.setTitle(friendGroup.name, for: UIControlState.normal)
+            
+            //添加好友数量
+            self.groupOnlineCount.text = "\(friendGroup.online!)" + "/" + "\(friendGroup.friends!.count)"
         }
     }
     
@@ -32,8 +35,11 @@ class LSHeaderView: UITableViewHeaderFooterView {
         self.groupTitle.contentVerticalAlignment = UIControlContentVerticalAlignment.fill
         
         self.groupTitle.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
-        contentView.addSubview(self.groupOnlineCount)
         
+        
+        
+        contentView.addSubview(self.groupOnlineCount)
+
         self.contentView.backgroundColor = UIColor.red
 
         
@@ -52,8 +58,19 @@ class LSHeaderView: UITableViewHeaderFooterView {
     */
     override func layoutSubviews() {
         super.layoutSubviews()
-        let groupTitleFrame = CGRect(x: 5, y: 0, width: 100, height: 10)
+        
         self.groupTitle.frame = self.bounds
+        
+        let onlineW:  CGFloat = 60
+        let onlineH = self.bounds.height
+        let onlineX = self.bounds.width - 10 - onlineW
+        let onlineY: CGFloat = 0
+
+        
+        let onlineFrame = CGRect(x: onlineX, y: onlineY, width: onlineW, height: onlineH)
+        self.groupOnlineCount.frame = onlineFrame
+        
+        
     }
 
 }

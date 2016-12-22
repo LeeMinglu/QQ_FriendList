@@ -34,6 +34,7 @@
 		1A3EEE7E1E0655120074CCC3 /* friends.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = friends.plist; sourceTree = "<group>"; };
 		1A3EEE801E06569C0074CCC3 /* LSFriend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSFriend.swift; sourceTree = "<group>"; };
 		1A3EEE821E0659F10074CCC3 /* LSGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LSGroup.swift; sourceTree = "<group>"; };
+		1AED912B1E0C1869003B762E /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +51,7 @@
 		1A3EEE581E0653F10074CCC3 = {
 			isa = PBXGroup;
 			children = (
+				1AED912B1E0C1869003B762E /* MyPlayground.playground */,
 				1A3EEE631E0653F10074CCC3 /* QQFriendList */,
 				1A3EEE621E0653F10074CCC3 /* Products */,
 			);

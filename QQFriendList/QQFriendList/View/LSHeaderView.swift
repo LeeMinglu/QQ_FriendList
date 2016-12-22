@@ -36,6 +36,7 @@ class LSHeaderView: UITableViewHeaderFooterView {
         
         self.groupTitle.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
         
+        self.groupTitle.addTarget(self, action: #selector(clickGroupTitle), for: UIControlEvents.touchUpInside)
         
         
         contentView.addSubview(self.groupOnlineCount)
@@ -43,6 +44,10 @@ class LSHeaderView: UITableViewHeaderFooterView {
         self.contentView.backgroundColor = UIColor.red
 
         
+    }
+    
+    func clickGroupTitle() {
+        print("点击了组按钮！！！")
     }
     
     required init?(coder aDecoder: NSCoder) {

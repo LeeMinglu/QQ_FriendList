@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, LSHeaderViewDelegate {
     
     let cellIdentifier = "friend"
     let headIdentifier = "headView"
@@ -33,11 +33,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.tableView = tableView
         self.view.addSubview(tableView)
         
-        let insets = UIEdgeInsetsMake(44, 0, 50, 0)
-        self.tableView.contentInset = insets
+//        let insets = UIEdgeInsetsMake(44, 0, 50, 0)
+//        self.tableView.contentInset = insets
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        
+        self.tableView.backgroundColor = UIColor.green
+        
     }
     
     
@@ -50,13 +53,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: - tableviewDelegate Methord
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        
         return self.fridendModels.count
     }
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let group = self.fridendModels[section]
-        return group.friends!.count
+//        return (group.isShow??group.friends!.count:0)
+        if group.isShow! {
+            return group.friends!.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -79,12 +88,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let headView = LSHeaderView.init(reuseIdentifier: headIdentifier)
         let group = self.fridendModels[section]
         
+        headView.delegate = self
+        
+        headView.tag = section
+        
 //        let view = UIView.init()
 //        view.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 10)
 //        view.backgroundColor = UIColor.red
 //        return view
         headView.friendGroup = group
         return headView
+    }
+    
+    func clickedGroupTitle(headerView: LSHeaderView) {
+        let section = NSIndexSet.init(index: headerView.tag) as IndexSet
+        self.tableView.reloadSections(section, with: UITableViewRowAnimation.left)
     }
 
 

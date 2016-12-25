@@ -12,9 +12,10 @@ class LSGroup: NSObject {
     var friends: Array<AnyObject>?
     var name: String?
     var online: NSNumber?
+    var isShow: Bool! = false
  
     
-    let properties = ["friends", "name", "online"]
+    let properties = ["friends", "name", "online","isVisible"]
     override var description: String {
         let dict = dictionaryWithValues(forKeys: properties)
         return ("\(dict)")

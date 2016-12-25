@@ -8,9 +8,17 @@
 
 import UIKit
 
+protocol LSHeaderViewDelegate: NSObjectProtocol {
+    func clickedGroupTitle(headerView: LSHeaderView)
+}
+
 class LSHeaderView: UITableViewHeaderFooterView {
     var groupTitle =  UIButton()
     var groupOnlineCount = UILabel()
+    
+    weak var delegate: LSHeaderViewDelegate?
+    
+    
     
     var friendGroup: LSGroup! {
         didSet {
@@ -36,7 +44,7 @@ class LSHeaderView: UITableViewHeaderFooterView {
         
         self.groupTitle.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
         
-        self.groupTitle.addTarget(self, action: #selector(clickGroupTitle), for: UIControlEvents.touchUpInside)
+        self.groupTitle.addTarget(self, action: #selector(clickGroupTitle), for: .touchUpInside)
         
         
         contentView.addSubview(self.groupOnlineCount)
@@ -48,6 +56,9 @@ class LSHeaderView: UITableViewHeaderFooterView {
     
     func clickGroupTitle() {
         print("点击了组按钮！！！")
+        self.friendGroup.isShow = !(self.friendGroup.isShow)
+        delegate?.clickedGroupTitle(headerView: self)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -60,6 +60,12 @@ class LSHeaderView: UITableViewHeaderFooterView {
         self.friendGroup.isShow = !(self.friendGroup.isShow)
         delegate?.clickedGroupTitle(headerView: self)
         
+//        if friendGroup.isShow! {
+//            self.groupTitle.imageView!.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
+//        } else {
+//             self.groupTitle.imageView!.transform = CGAffineTransform(rotationAngle: CGFloat(0))
+//        }
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -86,6 +92,12 @@ class LSHeaderView: UITableViewHeaderFooterView {
         
         let onlineFrame = CGRect(x: onlineX, y: onlineY, width: onlineW, height: onlineH)
         self.groupOnlineCount.frame = onlineFrame
+        
+        if friendGroup.isShow! {
+            self.groupTitle.imageView!.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
+        } else {
+             self.groupTitle.imageView!.transform = CGAffineTransform(rotationAngle: CGFloat(0))
+        }
         
         
     }

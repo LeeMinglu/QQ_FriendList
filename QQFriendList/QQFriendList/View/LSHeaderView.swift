@@ -43,6 +43,7 @@ class LSHeaderView: UITableViewHeaderFooterView {
         self.groupTitle.contentVerticalAlignment = UIControlContentVerticalAlignment.fill
         
         self.groupTitle.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
+        self.groupTitle.imageEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 3)
         
         self.groupTitle.addTarget(self, action: #selector(clickGroupTitle), for: .touchUpInside)
         

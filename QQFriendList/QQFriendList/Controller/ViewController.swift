@@ -44,6 +44,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.tableView.backgroundColor = UIColor.green
         
+        self.tableView.sectionFooterHeight = 0
+        
     }
     
     
@@ -64,6 +66,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let group = self.fridendModels![section]
         print(group.name!)
+        
+//        return group.friends!.count
+
 //        return (group.isShow??group.friends!.count:0)
         if group.isShow! {
             return group.friends!.count
@@ -96,19 +101,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         headView.delegate = self
         
         headView.tag = section
+        print("-------section" + "\(section)" )
         
-//        let view = UIView.init()
-//        view.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.size.width, height: 10)
-//        view.backgroundColor = UIColor.red
-//        return view
         headView.friendGroup = group
         return headView
     }
     
     func clickedGroupTitle(headerView: LSHeaderView) {
         let section = NSIndexSet.init(index: headerView.tag) as IndexSet
-        self.tableView.reloadSections(section, with: UITableViewRowAnimation.left)
+        self.tableView.reloadSections(section, with: .automatic)
     }
+   
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 44
+    }
+
 
 
     // MARK: - 懒加载模型

@@ -42,6 +42,9 @@ class LSHeaderView: UITableViewHeaderFooterView {
         self.groupTitle.contentHorizontalAlignment = UIControlContentHorizontalAlignment.left
         self.groupTitle.contentVerticalAlignment = UIControlContentVerticalAlignment.fill
         
+        self.groupTitle.imageView?.contentMode = UIViewContentMode.center
+        self.groupTitle.imageView?.clipsToBounds = false
+        
         self.groupTitle.contentEdgeInsets = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 0)
         self.groupTitle.imageEdgeInsets = UIEdgeInsets(top: 15, left: 0, bottom: 15, right: 3)
         
@@ -60,6 +63,7 @@ class LSHeaderView: UITableViewHeaderFooterView {
         self.friendGroup.isShow = !(self.friendGroup.isShow)
         delegate?.clickedGroupTitle(headerView: self)
         
+    //代码添加在这里图片还会还原，因为涉及到layoutSubViews,将此代码移到subViews中即可。
 //        if friendGroup.isShow! {
 //            self.groupTitle.imageView!.transform = CGAffineTransform(rotationAngle: CGFloat(M_PI_2))
 //        } else {

@@ -22,7 +22,7 @@ class LSHeaderView: UITableViewHeaderFooterView {
     
     var friendGroup: LSGroup! {
         didSet {
-            self.groupTitle.setTitle(friendGroup.name, for: UIControlState.normal)
+            self.groupTitle.setTitle(friendGroup.name!, for: UIControlState.normal)
             
             //添加好友数量
             self.groupOnlineCount.text = "\(friendGroup.online!)" + "/" + "\(friendGroup.friends!.count)"

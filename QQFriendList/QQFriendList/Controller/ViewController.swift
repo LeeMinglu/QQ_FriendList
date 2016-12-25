@@ -32,9 +32,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.tableView = tableView
         self.view.addSubview(tableView)
+//        状态栏  20
+//        导航条 44
+//        tabbar 49
         
-//        let insets = UIEdgeInsetsMake(44, 0, 50, 0)
-//        self.tableView.contentInset = insets
+        let insets = UIEdgeInsetsMake(20, 0, 49, 0)
+        self.tableView.contentInset = insets
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -59,7 +62,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let group = self.fridendModels[section]
+        let group = self.fridendModels![section]
+        print(group.name!)
 //        return (group.isShow??group.friends!.count:0)
         if group.isShow! {
             return group.friends!.count
@@ -72,6 +76,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! LSFriendCell
        
         let group = self.fridendModels[indexPath.section]
+        print("\(group.name)")
         NSLog("sssssssssssssssss")
         
         let friend = (group.friends![indexPath.row]) as! LSFriend
